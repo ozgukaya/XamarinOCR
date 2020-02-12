@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="App4.Views.FlyoutHeader"
+    VerticalOptions="Start"
+    HeightRequest="150">
+    <ContentView.Content>
+        <Grid>
+            <Image Source="xamarin_logo.png" Aspect="AspectFill" />
+            <BoxView BackgroundColor="Black" Opacity="0.5" />
+            <StackLayout VerticalOptions="Center" HorizontalOptions="Start" Padding="15,0,0,0">
+                <Frame CornerRadius="30"
+                       HorizontalOptions="Start"
+                       Padding="0"
+                       IsClippedToBounds="True">
+                    <Image Source="xamarin_logo.png"
+                           HeightRequest="60"
+                           WidthRequest="60"
+                           Aspect="AspectFill"
+                           HorizontalOptions="Center"
+                           VerticalOptions="Center" />
+                </Frame>
+                <Label Style="{DynamicResource WhiteLabel}" Text="Quick Scan" />
+                
+            </StackLayout>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

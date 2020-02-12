@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App4.Views.GalleryPage"
+             BackgroundColor="#F7F7F7">
+             
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="History" Clicked="Clicked_History" />
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2.5*"/>
+            <RowDefinition Height=".5*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+            <StackLayout Grid.Row="0" Margin="25" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Label  Text="Please press Select From Gallery"
+                            Padding="0,15,0,15"
+                   HorizontalOptions="Center"
+                   VerticalOptions="StartAndExpand"
+                   Style="{DynamicResource TitleStyle}"   />
+                <Button Text="Select From Gallery" TextColor="White" BackgroundColor="#C364A6" CornerRadius="25" Clicked="BtnSelectGallery"/>
+                <Image x:Name="imgPhoto" HeightRequest="125" WidthRequest="125"/>
+                <Button Text="Recognize Text" Margin="0,15,0,0" VerticalOptions="EndAndExpand" TextColor="White" BackgroundColor="#EA963C" CornerRadius="25" Clicked="BtnOCRAPIUrl" />
+
+            </StackLayout>
+            <StackLayout Grid.Row="1" Margin="25,0,25,0" Orientation="Horizontal" VerticalOptions="StartAndExpand" >
+                <Button x:Name="BtnCopy" VerticalOptions="EndAndExpand" BackgroundColor="#46A3B6" TextColor="White" CornerRadius="25"  Clicked="BtnCopyClicked" Text="Copy" HorizontalOptions="FillAndExpand"  />
+                <Button  VerticalOptions="EndAndExpand" BackgroundColor="#736CA4" CornerRadius="25" TextColor="White" HorizontalOptions="FillAndExpand" Text="Save" Clicked="BtnSave" />
+            </StackLayout>
+            <StackLayout  Grid.Row="2" Orientation="Horizontal"  Margin="25">
+                <Label x:Name="lblTexts" TextColor="Black" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+            
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
